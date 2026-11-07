@@ -1,49 +1,56 @@
-
 # Perfume Shop
 
-A modern and responsive perfume e-commerce website built with React, Vite, and Tailwind CSS.
+A modern and responsive perfume e-commerce web application built with **React 19**, **Vite**, and **Tailwind CSS**.
 
-The project focuses on creating an elegant shopping experience with a clean interface, product collections, and a structured component-based architecture.
+This project provides an elegant online shopping experience, allowing users to explore fragrance collections, browse products, view product details, and manage their shopping cart. Product data is integrated with **Supabase**.
 
 ## Preview
 
-<!-- Replace these placeholders with your actual screenshots -->
 ![Perfume Shop Homepage](docs/screenshots/homepage.png)
-
-## Live Demo
-
-<!-- Add your deployed website URL when available -->
-Coming soon
 
 ## Features
 
-- Modern and responsive user interface
-- Reusable React components
-- Hero section with product-focused visuals
-- Perfume collections by fragrance category
-- Best-selling products section
-- Product data integration with Supabase
-- Smooth animations and interactive UI elements
-- Client-side navigation
+- **Responsive Design:** Optimized layouts for desktop and mobile devices.
+- **Product Collections:** Browse perfumes across Floral, Woody, Oriental, and Fresh categories.
+- **Product Catalog:** Explore available perfumes and product information.
+- **Product Details:** View individual product information.
+- **Shopping Cart:** Add and manage products in the shopping cart.
+- **Supabase Integration:** Retrieve product data from a Supabase backend.
+- **Interactive UI:** Smooth animations and interactive components.
+- **Reusable Components:** Modular and maintainable React component architecture.
+- **Client-side Navigation:** Navigate between application pages.
 
-## Perfume Collections
+## Screenshots
 
-The website features different fragrance categories:
+### Homepage
 
-- Floral
-- Woody
-- Oriental
-- Fresh
+![Homepage](docs/screenshots/homepage.png)
+
+### Perfume Collections
+
+![Collections](docs/screenshots/collections.png)
+
+### Best Sellers
+
+![Best Sellers](docs/screenshots/best-sellers.png)
+
+### Brand Story
+
+![Brand Story](docs/screenshots/brand-story.png)
+
+### Mobile Responsive View
+
+![Mobile View](docs/screenshots/mobile-view.png)
 
 ## Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| React 19 | UI development |
-| Vite | Development and build tooling |
-| Tailwind CSS 4 | Styling |
-| React Router | Client-side routing |
-| Supabase | Backend and product data |
+| React 19 | Component-based UI development |
+| Vite | Development server and build tooling |
+| Tailwind CSS 4 | Responsive styling |
+| React Router 7 | Client-side routing |
+| Supabase | Backend and product data management |
 | Motion | UI animations |
 | Lucide React | Icons |
 
@@ -62,6 +69,8 @@ perfume-shop/
 │   │   └── productService.js
 │   ├── App.jsx
 │   └── main.jsx
+├── docs/
+│   └── screenshots/
 ├── .env.example
 ├── package.json
 └── README.md
@@ -73,7 +82,7 @@ perfume-shop/
 
 - Node.js
 - npm
-- A Supabase project
+- A Supabase project with the required product data configured
 
 ### Installation
 
@@ -95,9 +104,7 @@ cd perfume-shop
 npm install
 ```
 
-4. Configure environment variables.
-
-Create a `.env` file in the root directory:
+4. Create a `.env` file in the project root and configure your Supabase credentials:
 
 ```env
 VITE_SUPABASE_URL=your_supabase_url
@@ -110,43 +117,43 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 ```
 
+The application will be available at the local URL provided by Vite.
+
 ## Available Scripts
 
 | Command | Description |
 |---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the application for production |
+| `npm run preview` | Preview the production build |
 | `npm run lint` | Run ESLint |
 
-## Screenshots
+## Environment Variables
 
-### Homepage
-![Homepage](docs/screenshots/homepage.png)
+The application requires the following environment variables:
 
-### Collections
-![Collections](docs/screenshots/collections.png)
+| Variable | Description |
+|---|---|
+| `VITE_SUPABASE_URL` | Supabase project URL |
+| `VITE_SUPABASE_ANON_KEY` | Supabase publishable/anon client key |
 
-### Best Sellers
-![Best Sellers](docs/screenshots/best-sellers.png)
-
-### Responsive Design
-![Mobile View](docs/screenshots/mobile-view.png)
+Never commit your `.env` file or private credentials to GitHub.
 
 ## What I Learned
 
 Through this project, I gained practical experience in:
 
-- Building reusable and maintainable React components
-- Styling responsive interfaces with Tailwind CSS
-- Integrating Supabase into a React application
-- Organizing frontend services and application structure
-- Working with modern frontend development tools
+- Building reusable and maintainable React components.
+- Developing responsive layouts with Tailwind CSS.
+- Implementing client-side routing.
+- Integrating Supabase with a React application.
+- Fetching and managing backend product data.
+- Building e-commerce interfaces and shopping cart functionality.
+- Organizing frontend code into reusable components and service layers.
 
 ## Author
 
-**Melina Hadi**
-
+**Melina Hadi**  
 Front-End Developer
 
 - GitHub: [@melinahadi](https://github.com/melinahadi)
