@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
-import heroImage from "../assets/images/hero/hero-perfume.webp";
 import { Link } from "react-router-dom";
+import heroImage from "../assets/images/hero/hero-perfume.webp";
 
 function Hero() {
   return (
@@ -8,16 +8,14 @@ function Hero() {
       id="home"
       className="
         relative
-        h-[100svh]
         min-h-[600px]
+        h-[100svh]
         w-full
         overflow-hidden
         bg-lux-black
       "
     >
-      {/* =====================================================
-          HERO IMAGE
-      ===================================================== */}
+      {/* HERO IMAGE */}
       <motion.img
         src={heroImage}
         alt="LUXÉE Éclat Noir perfume"
@@ -40,7 +38,7 @@ function Hero() {
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Left gradient - makes text readable */}
+      {/* Left gradient */}
       <div
         className="
           absolute
@@ -65,9 +63,7 @@ function Hero() {
         "
       />
 
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
+      {/* CONTENT */}
       <div className="relative z-10 flex h-full items-center">
         <div
           className="
@@ -80,7 +76,12 @@ function Hero() {
           "
         >
           <motion.div
-            className="max-w-[62%] mb-24 sm:mb-8 sm:max-w-2xl"
+            className="
+              mb-24
+              max-w-[62%]
+              sm:mb-8
+              sm:max-w-2xl
+            "
             initial="hidden"
             animate="visible"
             variants={{
@@ -92,9 +93,7 @@ function Hero() {
               },
             }}
           >
-            {/* =====================================================
-                EYEBROW
-            ===================================================== */}
+            {/* EYEBROW */}
             <motion.p
               variants={{
                 hidden: {
@@ -121,9 +120,7 @@ function Hero() {
               New Exclusive
             </motion.p>
 
-            {/* =====================================================
-                HEADING
-            ===================================================== */}
+            {/* HEADING */}
             <motion.h1
               variants={{
                 hidden: {
@@ -155,9 +152,7 @@ function Hero() {
               <span className="font-normal italic">timeless scent.</span>
             </motion.h1>
 
-            {/* =====================================================
-                DESCRIPTION
-            ===================================================== */}
+            {/* DESCRIPTION */}
             <motion.p
               variants={{
                 hidden: {
@@ -190,9 +185,7 @@ function Hero() {
               designed to become part of your memory.
             </motion.p>
 
-            {/* =====================================================
-                CTA
-            ===================================================== */}
+            {/* CTA */}
             <motion.div
               variants={{
                 hidden: {
@@ -219,7 +212,6 @@ function Hero() {
                 to="/shop"
                 className="
                   group
-                  mt-5
                   inline-flex
                   items-center
                   gap-3
@@ -264,25 +256,53 @@ function Hero() {
                 </span>
               </Link>
             </motion.div>
+
+            {/* RESPONSIVE SCROLL INDICATOR */}
+            {/* Visible below xl screens */}
+            <div
+              className="
+    mt-10
+    flex
+    flex-col
+    items-start
+    gap-3
+    min-[1500px]:hidden
+  "
+            >
+              <span className="ml-1 h-10 w-px bg-lux-cream/40" />
+
+              <span
+                className="
+                  ml-0.5
+                  text-[9px]
+                  uppercase
+                  tracking-[0.35em]
+                  text-lux-cream/60
+                  [writing-mode:vertical-rl]
+                "
+              >
+                Scroll
+              </span>
+            </div>
           </motion.div>
         </div>
       </div>
 
-      {/* =====================================================
-          SCROLL INDICATOR
-      ===================================================== */}
+      {/* DESKTOP SCROLL INDICATOR */}
+      {/* Visible only on xl and larger screens */}
       <div
         className="
-          absolute
-          bottom-8
-          left-8
-          z-20
-          flex
-          flex-col
-          items-center
-          gap-3
-          lg:left-12
-        "
+    absolute
+    bottom-8
+    left-8
+    z-20
+    hidden
+    flex-col
+    items-center
+    gap-3
+    min-[1500px]:flex
+    min-[1500px]:left-12
+  "
       >
         <span className="h-10 w-px bg-lux-cream/40" />
 
@@ -299,9 +319,7 @@ function Hero() {
         </span>
       </div>
 
-      {/* =====================================================
-          SLIDE INDICATOR
-      ===================================================== */}
+      {/* SLIDE INDICATOR */}
       <div
         className="
           absolute

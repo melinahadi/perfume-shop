@@ -1,8 +1,9 @@
+
 # Perfume Shop
 
 A modern and responsive perfume e-commerce web application built with **React 19**, **Vite**, and **Tailwind CSS**.
 
-This project provides an elegant online shopping experience, allowing users to explore fragrance collections, browse products, view product details, and manage their shopping cart. Product data is integrated with **Supabase**.
+This project provides an elegant shopping experience, allowing users to explore fragrance collections, browse products, view product details, and manage their shopping cart. Product data is integrated with **Supabase**.
 
 ## Preview
 
@@ -11,46 +12,50 @@ This project provides an elegant online shopping experience, allowing users to e
 ## Features
 
 - **Responsive Design:** Optimized layouts for desktop and mobile devices.
-- **Product Collections:** Browse perfumes across Floral, Woody, Oriental, and Fresh categories.
+- **Product Collections:** Browse Floral, Woody, Oriental, and Fresh fragrances.
 - **Product Catalog:** Explore available perfumes and product information.
 - **Product Details:** View individual product information.
-- **Shopping Cart:** Add and manage products in the shopping cart.
-- **Supabase Integration:** Retrieve product data from a Supabase backend.
+- **Shopping Cart:** Add, remove, and manage products in the cart.
+- **Supabase Integration:** Retrieve product data from Supabase.
 - **Interactive UI:** Smooth animations and interactive components.
-- **Reusable Components:** Modular and maintainable React component architecture.
+- **Reusable Components:** Modular React component architecture.
 - **Client-side Navigation:** Navigate between application pages.
 
 ## Screenshots
 
 ### Homepage
-
 ![Homepage](docs/screenshots/homepage.png)
 
 ### Perfume Collections
-
 ![Collections](docs/screenshots/collections.png)
 
 ### Best Sellers
-
 ![Best Sellers](docs/screenshots/best-sellers.png)
 
-### Brand Story
+### Product Details
+![Product Details](docs/screenshots/product-details.png)
 
+### Shopping Cart
+![Shopping Cart](docs/screenshots/shopping-cart.png)
+
+### Brand Story
 ![Brand Story](docs/screenshots/brand-story.png)
 
-### Mobile Responsive View
+### Mobile Experience
 
-![Mobile View](docs/screenshots/mobile-view.png)
+| Mobile Homepage | Mobile Products |
+|---|---|
+| ![Mobile Homepage](docs/screenshots/mobile-homepage.png) | ![Mobile Products](docs/screenshots/mobile-products.png) |
 
 ## Tech Stack
 
 | Technology | Purpose |
 |---|---|
-| React 19 | Component-based UI development |
-| Vite | Development server and build tooling |
+| React 19 | UI development |
+| Vite | Development and build tooling |
 | Tailwind CSS 4 | Responsive styling |
 | React Router 7 | Client-side routing |
-| Supabase | Backend and product data management |
+| Supabase | Backend and product data |
 | Motion | UI animations |
 | Lucide React | Icons |
 
@@ -64,9 +69,7 @@ perfume-shop/
 │   ├── components/
 │   ├── pages/
 │   ├── lib/
-│   │   └── supabase.js
 │   ├── services/
-│   │   └── productService.js
 │   ├── App.jsx
 │   └── main.jsx
 ├── docs/
@@ -117,25 +120,21 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 npm run dev
 ```
 
-The application will be available at the local URL provided by Vite.
-
 ## Available Scripts
 
 | Command | Description |
 |---|---|
 | `npm run dev` | Start the development server |
-| `npm run build` | Build the application for production |
+| `npm run build` | Build the application |
 | `npm run preview` | Preview the production build |
 | `npm run lint` | Run ESLint |
 
 ## Environment Variables
 
-The application requires the following environment variables:
-
 | Variable | Description |
 |---|---|
 | `VITE_SUPABASE_URL` | Supabase project URL |
-| `VITE_SUPABASE_ANON_KEY` | Supabase publishable/anon client key |
+| `VITE_SUPABASE_ANON_KEY` | Supabase publishable/anon key |
 
 Never commit your `.env` file or private credentials to GitHub.
 
@@ -143,12 +142,12 @@ Never commit your `.env` file or private credentials to GitHub.
 
 Through this project, I gained practical experience in:
 
-- Building reusable and maintainable React components.
+- Building reusable React components.
 - Developing responsive layouts with Tailwind CSS.
 - Implementing client-side routing.
-- Integrating Supabase with a React application.
+- Integrating Supabase with React.
 - Fetching and managing backend product data.
-- Building e-commerce interfaces and shopping cart functionality.
+- Building shopping cart functionality.
 - Organizing frontend code into reusable components and service layers.
 
 ## Author

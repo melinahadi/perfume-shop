@@ -225,8 +225,68 @@ function Navbar() {
 
               {/* Account Dropdown - همون کد قبلی خودت */}
               {isAccountOpen && (
-                <div className="absolute right-0 top-9 w-64 border border-lux-cream/10 bg-lux-black p-5 shadow-2xl">
-                  {/* محتوای قبلی Account رو اینجا نگه دار */}
+                <div className="absolute right-0 top-9 z-[100] w-64 border border-lux-cream/10 bg-lux-black p-5 text-lux-cream shadow-2xl">
+                  {user ? (
+                    <>
+                      <div className="mb-5 border-b border-lux-cream/10 pb-4">
+                        <p className="text-[9px] uppercase tracking-[0.25em] text-lux-gold">
+                          Welcome Back
+                        </p>
+
+                        <p className="mt-2 break-all text-sm text-lux-cream/70">
+                          {user.email}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col gap-4">
+                        <Link
+                          to="/account"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="text-[10px] uppercase tracking-[0.2em] text-lux-cream/70 transition-colors hover:text-lux-gold"
+                        >
+                          My Account
+                        </Link>
+
+                        <Link
+                          to="/orders"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="text-[10px] uppercase tracking-[0.2em] text-lux-cream/70 transition-colors hover:text-lux-gold"
+                        >
+                          My Orders
+                        </Link>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="mb-5 border-b border-lux-cream/10 pb-4">
+                        <p className="font-display text-lg text-lux-cream">
+                          Welcome to LUXÉE
+                        </p>
+
+                        <p className="mt-2 text-[9px] tracking-[0.15em] text-lux-cream/40">
+                          Sign in to access your account
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col gap-4">
+                        <Link
+                          to="/login"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="text-[10px] uppercase tracking-[0.2em] text-lux-cream/70 transition-colors hover:text-lux-gold"
+                        >
+                          Sign In
+                        </Link>
+
+                        <Link
+                          to="/register"
+                          onClick={() => setIsAccountOpen(false)}
+                          className="text-[10px] uppercase tracking-[0.2em] text-lux-cream/70 transition-colors hover:text-lux-gold"
+                        >
+                          Create Account
+                        </Link>
+                      </div>
+                    </>
+                  )}
                 </div>
               )}
             </div>
