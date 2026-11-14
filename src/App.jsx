@@ -16,7 +16,7 @@ import { WishlistProvider } from "./context/WishlistContext";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <WishlistProvider>
         <Routes>
           <Route path="/" element={<Home />} />
