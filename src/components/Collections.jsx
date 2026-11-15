@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
 // Import collection images
-import floralImage from "../assets/images/collections/Floral.webp";
-import woodyImage from "../assets/images/collections/Woody.webp";
-import orientalImage from "../assets/images/collections/Oriental.webp";
-import freshImage from "../assets/images/collections/Fresh.webp";
+import floralImage from "../assets/images/collections/Floral1.webp";
+import woodyImage from "../assets/images/collections/Woody1.webp";
+import orientalImage from "../assets/images/collections/Oriental1.webp";
+import freshImage from "../assets/images/collections/Fresh1.webp";
 
 const collections = [
   {

@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import brandStoryImage from "../assets/images/story/brand-story4.png";
+import brandStoryImage from "../assets/images/story/brand-story41.webp";
 import { Link } from "react-router-dom";
 
 function BrandStory() {

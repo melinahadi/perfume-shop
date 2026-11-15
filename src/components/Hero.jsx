@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/images/hero/hero-perfume.webp";
+import heroImage from "../assets/images/hero/hero-perfume1.webp";
 
 function Hero() {
   return (
