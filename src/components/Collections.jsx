@@ -1,26 +1,32 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
+// Import collection images
+import floralImage from "../assets/images/collections/Floral.webp";
+import woodyImage from "../assets/images/collections/Woody.webp";
+import orientalImage from "../assets/images/collections/Oriental.webp";
+import freshImage from "../assets/images/collections/Fresh.webp";
+
 const collections = [
   {
     name: "Floral",
     description: "Delicate & Elegant",
-    image: "/src/assets/images/collections/Floral.webp",
+    image: floralImage,
   },
   {
     name: "Woody",
     description: "Warm & Intense",
-    image: "/src/assets/images/collections/Woody.webp",
+    image: woodyImage,
   },
   {
     name: "Oriental",
     description: "Rich & Mysterious",
-    image: "/src/assets/images/collections/Oriental.webp",
+    image: orientalImage,
   },
   {
     name: "Fresh",
     description: "Clean & Vibrant",
-    image: "/src/assets/images/collections/Fresh.webp",
+    image: freshImage,
   },
 ];
 
@@ -56,26 +62,9 @@ function Collections() {
             collections and discover a scent that feels uniquely yours.
           </p>
 
-          {/* Explore Collections */}
           <Link
             to="/shop"
-            className="
-              mt-8
-              inline-flex
-              items-center
-              border
-              border-lux-black/30
-              px-6
-              py-3
-              text-[9px]
-              font-medium
-              uppercase
-              tracking-[0.25em]
-              transition-all
-              duration-300
-              hover:bg-lux-black
-              hover:text-lux-cream
-            "
+            className="mt-8 inline-flex items-center border border-lux-black/30 px-6 py-3 text-[9px] font-medium uppercase tracking-[0.25em] transition-all duration-300 hover:bg-lux-black hover:text-lux-cream"
           >
             Explore Collections
           </Link>
@@ -96,30 +85,13 @@ function Collections() {
             >
               <Link
                 to={`/shop?category=${collection.name}`}
-                className="
-                  group
-                  relative
-                  block
-                  aspect-[3/4]
-                  overflow-hidden
-                  bg-lux-dark
-                "
+                className="group relative block aspect-[3/4] overflow-hidden bg-lux-dark"
               >
                 {/* Image */}
                 <img
                   src={collection.image}
                   alt={collection.name}
-                  className="
-                    absolute
-                    inset-0
-                    h-full
-                    w-full
-                    object-cover
-                    transition-transform
-                    duration-1000
-                    ease-[cubic-bezier(0.22,1,0.36,1)]
-                    group-hover:scale-110
-                  "
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                 />
 
                 {/* Overlay */}
@@ -135,29 +107,7 @@ function Collections() {
                     {collection.description}
                   </p>
 
-                  <span
-                    className="
-                      mt-4
-                      inline-flex
-                      items-center
-                      gap-2
-                      border-b
-                      border-lux-cream/50
-                      pb-1
-                      text-[8px]
-                      uppercase
-                      tracking-[0.25em]
-                      opacity-100
-                      transition-all
-                      duration-500
-                      sm:translate-y-2
-                      sm:opacity-0
-                      sm:group-hover:translate-y-0
-                      sm:group-hover:border-lux-gold
-                      sm:group-hover:text-lux-gold
-                      sm:group-hover:opacity-100
-                    "
-                  >
+                  <span className="mt-4 inline-flex items-center gap-2 border-b border-lux-cream/50 pb-1 text-[8px] uppercase tracking-[0.25em] opacity-100 transition-all duration-500 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:border-lux-gold sm:group-hover:text-lux-gold sm:group-hover:opacity-100">
                     Shop Now
                     <span className="text-xs">→</span>
                   </span>
