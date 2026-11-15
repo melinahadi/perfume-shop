@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import brandStoryImage from "../assets/images/story/brand-story41.webp";
+import brandStoryImage from "../assets/images/story/brand-story4.pnj";
 import { Link } from "react-router-dom";
 
 function BrandStory() {
@@ -11,6 +11,8 @@ function BrandStory() {
       {/* Background Image */}
       <motion.img
         src={brandStoryImage}
+        loading="lazy"
+        decoding="async"
         alt="The art of perfumery"
         initial={{ opacity: 0, scale: 1.04 }}
         whileInView={{ opacity: 1, scale: 1 }}

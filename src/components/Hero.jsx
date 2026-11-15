@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/images/hero/hero-perfume1.webp";
+import heroImage from "../assets/images/hero/hero-perfume.webp";
 
 function Hero() {
   return (
@@ -18,6 +18,9 @@ function Hero() {
       {/* HERO IMAGE */}
       <motion.img
         src={heroImage}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
         alt="LUXÉE Éclat Noir perfume"
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
